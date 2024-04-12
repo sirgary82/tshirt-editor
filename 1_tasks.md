@@ -1,5 +1,13 @@
 1. Setup Azure Blob Storage
 Create a Blob Storage Account: In the Azure portal, create a new Blob Storage account if you haven't already. Note the account name and key; you'll need these to access the storage from your function.
+
+Azure Blob Storage: You should have Azure Blob Storage set up with a container for storing your images.
+\\ this is how you do it
+    # Create Azure Blob Storage account
+    az storage account create --name <StorageAccountName> --resource-group <ResourceGroupName> --location <Location> --sku Standard_LRS
+
+    # Create the container
+    az storage container create --account-name <StorageAccountName> --name <ContainerName>
 Create a Container: Within your Blob Storage account, create a container where uploaded files will be stored.
 2. Develop the Azure Function
 Initialize a New Function App: If you don't have an existing Function App, create one in the Azure portal or via the Azure CLI. This app will host your file upload function.
@@ -7,7 +15,7 @@ Create a New Function: Within your Function App, create a new function triggered
 3. Implement File Upload Logic
 Here's a simplified example of what the function's code might look like, using Node.js:
 
-//code strts
+//code starts
 const { BlobServiceClient } = require('@azure/storage-blob');
 const multipart = require('parse-multipart');
 
