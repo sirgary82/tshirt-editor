@@ -1,0 +1,11 @@
+{
+    "scripts": {
+      "install:aws": "cd aws && npm install",
+      "install:azure": "cd azure && npm install",
+      "build:aws": "cd aws && npm run build",
+      "build:azure": "cd azure && npm run build",
+      "deploy:aws": "cd aws && npm run deploy",
+      "deploy:azure": "cd azure && npm run deploy"
+    }
+  }
+  

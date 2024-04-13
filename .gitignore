@@ -1,30 +1,74 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-node_modules
-/.pnp
+# Node.js dependencies
+node_modules/
+.pnp/
 .pnp.js
 
-# testing
-/coverage
+# Azure Function keys
+local.settings.json
 
-# production
-/editor/build
+# AWS CDK specific
+cdk.out/
+cdk.context.json
+cdk-outputs.json
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Compiled source #
+###################
+/dist/
+/build/
+/out/
 
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Editor directories and files #
+################################
+.editorconfig
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Environment files #
+#####################
+.env*
+!.env.example
+
+# Misc #
+########
+secret.json
+examples/
+
+# Testing #
+###########
+/coverage/
+*.test.js
+*.spec.js
+/tests/
+
+# Production #
+##############
+/editor/build/
+
+# Ignore javascript files in backend/aws directory (as specified)
+/backend/aws/**/*.js
+
+# Debug log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-secret.json
-/backend/aws/**/*.js
-cdk.out
-cdk-outputs.json
-examples
-dist
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Optional eslint cache
+.eslintcache

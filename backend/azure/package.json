@@ -3,3 +3,22 @@
     "deploy": "terraform -chdir=./terraform apply"
   }
 }
+{
+  "name": "upload-function",
+  "version": "1.0.0",
+  "description": "Function to upload files to Printful",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "func start"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@azure/functions": "^1.2.3",
+    "typescript": "^4.2.4"
+  }
+}

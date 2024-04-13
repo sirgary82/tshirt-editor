@@ -1,21 +1,18 @@
-// Contents of upload-file.ts
+import fetch from "node-fetch";
+import FormData from "form-data";
 
-import * as fetch from "node-fetch";
+export async function uploadFileToPrintful(fileBuffer: Buffer, fileName: string) {
+    const formData = new FormData();
+    formData.append("file", fileBuffer, { filename: fileName });
 
-async function uploadFileToPrintful(fileBuffer, fileName) {
     const response = await fetch("https://api.printful.com/files", {
         method: 'POST',
         headers: {
-            'Authorization': 'Bearer YOUR_PRINTFUL_API_KEY_HERE',
-            'Content-Type': 'multipart/form-data'
+            'Authorization': `Bearer ${process.env.PRINTFUL_API_KEY}`, // Use environment variables
+            ...formData.getHeaders() // Automatically sets the Content-Type to multipart/form-data with boundary
         },
-        body: JSON.stringify({
-            file: fileBuffer,
-            filename: fileName
-        })
+        body: formData
     });
 
     return response.json();
 }
-
-export { uploadFileToPrintful };

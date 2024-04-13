@@ -1,0 +1,38 @@
+To find your Azure Blob Storage connection string, you typically need to access the Azure portal as Visual Studio Code does not directly provide a way to view Azure Storage connection strings from within the IDE. However, you can manage Azure resources and view properties using the Azure Storage extension for VS Code, which can simplify navigation but does not directly reveal sensitive data like connection strings. Here’s how you can retrieve the connection string from the Azure portal:
+
+Steps to Find Your Azure Blob Storage Connection String via Azure Portal:
+Log in to the Azure Portal:
+
+Open your web browser and navigate to Azure Portal.
+Enter your credentials to log in.
+Navigate to Storage Accounts:
+
+In the Azure portal dashboard, find and click on “Storage accounts” from the resources menu or use the search bar at the top to search for "Storage accounts."
+Select Your Storage Account:
+
+From the list of storage accounts, click on the specific storage account that you are using for your project.
+Access Keys:
+
+Inside the storage account, look for a section on the left-hand menu called “Security + networking” or directly look for “Access keys” under the “Settings” group depending on the portal updates.
+Click on “Access keys.” Here you will find two keys and their full connection strings.
+Copy the Connection String:
+
+Under “key1” or “key2,” find the Connection string field.
+Click on the copy button next to the connection string to copy it to your clipboard.
+Using the Azure Storage Extension for VS Code:
+If you prefer to stay within the VS Code environment as much as possible, you can use the Azure Storage extension:
+
+Install the Azure Storage Extension:
+
+Open VS Code.
+Go to the Extensions view by clicking on the square icon on the sidebar or pressing Ctrl+Shift+X.
+Search for "Azure Storage" and install the extension provided by Microsoft.
+Sign In and Navigate to Your Storage Account:
+
+Once installed, sign in to your Azure account through VS Code by following the prompts in the Azure Storage extension.
+After signing in, expand the Storage section, navigate to your subscription, and find your storage account.
+View Properties:
+
+The extension allows you to interact with blobs, files, queues, and tables but to view sensitive information like connection strings, you will still need to use the Azure portal as this is typically not displayed in the extension for security reasons.
+Inserting the Connection String in Your Project:
+Once you have the connection string, replace <your_actual_storage_connection_string_here> in your local.settings.json or any relevant configuration file with the actual string you copied. Ensure you manage this sensitive information securely and do not expose it in public repositories or unsecured locations.
