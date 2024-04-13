@@ -3,7 +3,7 @@
     "Values": {
       "AzureWebJobsStorage": "UseDevelopmentStorage=true", // For local development with Storage Emulator
       "FUNCTIONS_WORKER_RUNTIME": "node", // Set this according to your project's runtime
-      "AZURE_STORAGE_CONNECTION_STRING": "DefaultEndpointsProtocol=https;AccountName=aztshirteditorstorage;AccountKey=kQZd2jiQkA0+yeJNKuGYvo9xa1jHGop86+RYlO1D11jHVI/dj/OZrzoyS/wZ+0UMc3NBFEuqNgSo+AStKnLSGQ==;EndpointSuffix=core.windows.net"
+      "AZURE_STORAGE_CONNECTION_STRING": "add_key_here"
       "PRINTFUL_API_KEY": "<your_printful_api_key>"
     }
   }
